@@ -1,2 +1,2 @@
 # Scripts
-Very random bash and python code
+Random bash and python code
