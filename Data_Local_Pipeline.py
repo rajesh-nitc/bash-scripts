@@ -1,19 +1,19 @@
 from apache_beam.io.textio import WriteToText
-import a0_local_base
+import Data_Main_Class
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions
 
 
-class Data_ingestion_local_pipeline_subclass(a0_local_base.DataIngestion):
+class Data_ingestion_local_pipeline_subclass(Data_Main_Class.DataIngestion):
     """.."""
 
-    def __init__(self, schema_file_name: str, csv_file_name: str, input_dir: str = "input", output_dir: str = "output/out.txt"):
+    def __init__(self, schema_file_name: str, csv_file_name: str, input_dir: str, output_dir: str = "output/out.txt"):
         super().__init__(schema_file_name, csv_file_name, input_dir)
         self.output_dir = output_dir
 
 
 def main():
-    known_args, pipeline_args = a0_local_base.parse_args()
+    known_args, pipeline_args = Data_Main_Class.parse_args()
     data_ingestion = Data_ingestion_local_pipeline_subclass(
         known_args.schema_filename, known_args.csv_filename, known_args.files_dir)
 

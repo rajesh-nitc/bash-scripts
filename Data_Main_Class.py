@@ -10,7 +10,7 @@ class DataIngestion():
     func is simulated by 'for line in lines'. This module just prints the dict 
     rows on console."""
 
-    def __init__(self, schema_file_name: str, csv_file_name: str, input_dir: str = "input"):
+    def __init__(self, schema_file_name: str, csv_file_name: str, input_dir: str):
         self.schema_file_name = schema_file_name
         self.csv_file_name = csv_file_name
         self.input_dir = input_dir
@@ -56,11 +56,13 @@ def parse_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--schema_filename',
-                        required=True,
+                        required=False,
+                        default="usa_names.json",
                         help='Name of the schema file')
 
     parser.add_argument('--csv_filename',
-                        required=True,
+                        required=False,
+                        default="usa_names.csv",
                         help='Name of the csv file')
 
     parser.add_argument('--files_dir',
