@@ -9,8 +9,8 @@
 # This script will install following packages on Chromebook:
 # 
 # gcloud skaffold kubectl kustomize kpt nomos anthoscli etc
-# vs code terraform terraform-docs terraform-validator pre-commit  
-# docker python3 jupyter-notebook (optional)
+# vs code terraform terraform-docs terraform-validator pre-commit docker python3 
+# jupyter-notebook (optional)
 #
 # #######################################################################################
 
@@ -38,7 +38,7 @@ sudo apt-get install -y code
 rm packages.microsoft.gpg
 
 # python
-# gloud sdk needs python
+# gcloud sdk needs python
 sudo apt install -y python3 python3-dev python3-venv python3-pip 
 pip3 install pip-tools
 
